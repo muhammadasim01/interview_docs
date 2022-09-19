@@ -1,43 +1,32 @@
-import React, { useState } from "react";
-import { BsThreeDotsVertical } from "react-icons/bs";
-function Page() {
-  const [showVerticleBar, setShowVerticleBar] = useState(false);
-  const [showPopUp, setShowPopUp] = useState(false);
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Content from "./Content";
+import SideNav from "./SideNav";
+import Toolbar from "@mui/material/Toolbar";
+
+export default function Page() {
   return (
-    <div className="bg-white h-5/6 w-1/2 self-center rounded-lg shadow-sm shadow-zinc-100 p-10 flex flex-col">
-      <h1 className="grid justify-items-center text-3xl font-medium text-gray-500 underline">
-        REACT
-      </h1>
-      <div
-        className={`pt-5 grid justify-items-start `}
-        onMouseEnter={() => setShowVerticleBar(true)}
-        onMouseLeave={() => setShowVerticleBar(false)}
-      >
-        <div className="flex justify-between items-center w-[45vw]">
-          <h2 className="text-xl font-semibold">What is JSX?</h2>
-          <i
-            className="flex-end hover:cursor-pointer"
-            onClick={() => setShowPopUp(true)}
-          >
-            {showVerticleBar && <BsThreeDotsVertical />}
-          </i>
-        </div>
-        <p className="text-sm font-semibold text-gray-600 leading-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa tenetur
-          est tempore adipisci, voluptatem blanditiis, nam voluptas cupiditate
-          perspiciatis optio quod. Consectetur, inventore explicabo error eaque
-          a magni beatae rem!
-        </p>
+    <Box sx={{ display: "flex" }} className="bg-[#f5eceb]">
+      <SideNav />
+
+      <div>
+        <Toolbar />
+        <h1 className="grid justify-items-center text-3xl font-medium text-gray-800 underline ">
+          React
+        </h1>
+        <Content
+          question="Lorem, ipsum dolor sit"
+          answer="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quidem animi laboriosam repellat iusto nisi laudantium harum sed incidunt hic qui magnam culpa nesciunt ipsum quae doloremque quia nam, rem voluptas doloribus cum similique fugiat! Facilis voluptates illum accusantium. Maxime, quae error aliquid cum velit assumenda quo illo officia earum corrupti reiciendis laborum odit eum dolores iste. Quisquam nostrum enim suscipit ratione nesciunt, quidem magni inventore, amet maiores natus alias aperiam beatae error iste. Et aliquam consequatur nesciunt tempore incidunt adipisci, rem nulla perspiciatis non assumenda repellat recusandae facere molestiae quibusdam aliquid. Adipisci blanditiis illum incidunt, doloribus quisquam facere architecto. Tempore corporis dicta, quis soluta facere eveniet vero ex excepturi quos amet nostrum dolor fugit nihil non reprehenderit maxime quaerat laudantium molestias aliquam, totam doloremque! Est magnam iure reprehenderit hic rem. Aut maxime a consequatur voluptas excepturi id minus repellendus doloremque nam maiores quis corporis dignissimos, optio illum nostrum assumenda porro ipsum consequuntur tempore adipisci! Obcaecati facilis ex deleniti illo neque eveniet fugit commodi, atque dignissimos sint consequuntur nisi laborum quia? Optio, soluta. Soluta ducimus beatae harum consequatur. Unde, dolore libero voluptatibus officia iusto blanditiis tenetur deserunt! Sequi odio iusto aperiam dolorum eos vero consectetur consequuntur. Tempora recusandae assumenda doloribus!"
+        />
+        <Content
+          question="Lorem, ipsum dolor sit"
+          answer="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quidem animi laboriosam repellat iusto nisi laudantium harum sed incidunt hic qui magnam culpa nesciunt ipsum quae doloremque quia nam, rem voluptas doloribus cum similique fugiat! Facilis voluptates illum accusantium. Maxime, quae error aliquid cum velit assumenda quo illo officia earum corrupti reiciendis laborum odit eum dolores iste. Quisquam nostrum enim suscipit ratione nesciunt, quidem magni inventore, amet maiores natus alias aperiam beatae error iste. Et aliquam consequatur nesciunt tempore incidunt adipisci, rem nulla perspiciatis non assumenda repellat recusandae facere molestiae quibusdam aliquid. Adipisci blanditiis illum incidunt, doloribus quisquam facere architecto. Tempore corporis dicta, quis soluta facere eveniet vero ex excepturi quos amet nostrum dolor fugit nihil non reprehenderit maxime quaerat laudantium molestias aliquam, totam doloremque! Est magnam iure reprehenderit hic rem. Aut maxime a consequatur voluptas excepturi id minus repellendus doloremque nam maiores quis corporis dignissimos, optio illum nostrum assumenda porro ipsum consequuntur tempore adipisci! Obcaecati facilis ex deleniti illo neque eveniet fugit commodi, atque dignissimos sint consequuntur nisi laborum quia? Optio, soluta. Soluta ducimus beatae harum consequatur. Unde, dolore libero voluptatibus officia iusto blanditiis tenetur deserunt! Sequi odio iusto aperiam dolorum eos vero consectetur consequuntur. Tempora recusandae assumenda doloribus!"
+        />
+        <Content
+          question="Lorem, ipsum dolor sit"
+          answer="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quidem animi laboriosam repellat iusto nisi laudantium harum sed incidunt hic qui magnam culpa nesciunt ipsum quae doloremque quia nam, rem voluptas doloribus cum similique fugiat! Facilis voluptates illum accusantium. Maxime, quae error aliquid cum velit assumenda quo illo officia earum corrupti reiciendis laborum odit eum dolores iste. Quisquam nostrum enim suscipit ratione nesciunt, quidem magni inventore, amet maiores natus alias aperiam beatae error iste. Et aliquam consequatur nesciunt tempore incidunt adipisci, rem nulla perspiciatis non assumenda repellat recusandae facere molestiae quibusdam aliquid. Adipisci blanditiis illum incidunt, doloribus quisquam facere architecto. Tempore corporis dicta, quis soluta facere eveniet vero ex excepturi quos amet nostrum dolor fugit nihil non reprehenderit maxime quaerat laudantium molestias aliquam, totam doloremque! Est magnam iure reprehenderit hic rem. Aut maxime a consequatur voluptas excepturi id minus repellendus doloremque nam maiores quis corporis dignissimos, optio illum nostrum assumenda porro ipsum consequuntur tempore adipisci! Obcaecati facilis ex deleniti illo neque eveniet fugit commodi, atque dignissimos sint consequuntur nisi laborum quia? Optio, soluta. Soluta ducimus beatae harum consequatur. Unde, dolore libero voluptatibus officia iusto blanditiis tenetur deserunt! Sequi odio iusto aperiam dolorum eos vero consectetur consequuntur. Tempora recusandae assumenda doloribus!"
+        />
       </div>
-      {showPopUp&&<div
-        className="popup bg-[whitesmoke] rounded-sm border-gray border-2 w-[6rem] p-2"
-        style={{ position: "relative" ,left:"37rem",bottom: "4.5rem"}}
-      >
-        <div className="edit mb-1  w-14">Edit</div>
-        <div className="delete  w-14">Delete</div>
-      </div>}
-    </div>
+    </Box>
   );
 }
-
-export default Page;
